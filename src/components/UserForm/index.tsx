@@ -31,7 +31,7 @@ export class UserFormImpl extends React.Component<IUserFormProps, IUserFormState
 
     handleSubmit = (event: any) => {
         event.preventDefault();
-        const name = event.target.value;
+        const name = this.state.name;
         if (!name) {
             alert('Please write your name first...!!!')
             return;
@@ -42,9 +42,7 @@ export class UserFormImpl extends React.Component<IUserFormProps, IUserFormState
     }
 
     copyLink = () => {
-        const { name } = this.state;
-        const name1: any = name;
-        name1.select();
+        const name1: any = document.getElementById('link');
         name1.execCommand('Copy');
         alert('Link copied...!!!')
     }
@@ -53,6 +51,11 @@ export class UserFormImpl extends React.Component<IUserFormProps, IUserFormState
         return (
             <div>
                 <h1>Following is your link -> </h1>
+                <p id="link">
+                    {
+                        'sadsaasdsdadas'
+                    }
+                </p>
                 <Button onClick={this.copyLink} className="submit-button" type="submit">Copy Link</Button>
             </div>
         )
