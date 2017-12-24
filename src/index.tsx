@@ -11,8 +11,6 @@ import registerServiceWorker from './registerServiceWorker';
 import { store } from './store/index';
 import { App } from './App';
 
-require('../node_modules/bootstrap/dist/css/bootstrap.css')
-
 ReactDOM.render(
   <Provider store={store}>
     <HashRouter>

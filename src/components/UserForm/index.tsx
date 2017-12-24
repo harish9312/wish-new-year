@@ -14,12 +14,13 @@ export interface IUserFormProps {
 
 export interface IUserFormState {
     name: string;
+    showLink: boolean;
 }
 
 export class UserFormImpl extends React.Component<IUserFormProps, IUserFormState> {
     constructor(prpps: any) {
         super(prpps);
-        this.state = { name: '' }
+        this.state = { name: '', showLink: false }
     }
 
     handleInput = (event: any) => {
@@ -30,16 +31,37 @@ export class UserFormImpl extends React.Component<IUserFormProps, IUserFormState
 
     handleSubmit = (event: any) => {
         event.preventDefault();
-        this.props.history.push(`/${this.state.name}`)
+        const name = event.target.value;
+        if (!name) {
+            alert('Please write your name first...!!!')
+            return;
+        }
+        this.setState({
+            showLink: true
+        })
+    }
+
+    copyLink = () => {
+        const { name } = this.state;
+        const name1: any = name;
+        name1.select();
+        name1.execCommand('Copy');
+        alert('Link copied...!!!')
     }
 
     renderLink = () => {
         return (
-            <h1></h1>
+            <div>
+                <h1>Following is your link -> </h1>
+                <Button onClick={this.copyLink} className="submit-button" type="submit">Copy Link</Button>
+            </div>
         )
     }
 
     renderContent = () => {
+        if (this.state.showLink) {
+            return this.renderLink()
+        }
         return (
             <form className="user-form" onSubmit={this.handleSubmit}>
                 <h2 className="text-label">Enter your name to get your link:</h2>
