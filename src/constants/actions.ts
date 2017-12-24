@@ -1,0 +1,2 @@
+export const SET_WISHER_NAME = 'SET_WISHER_NAME';
+export const REMOVE_WISHER_NAME = 'REMOVE_WISHER_NAME';

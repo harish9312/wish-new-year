@@ -1,0 +1,90 @@
+@font-face {
+    font-family: "Beyond";
+    src: url("./fonts/font1.ttf");
+}
+
+@font-face {
+    font-family: "Label";
+    src: url("./fonts/label.otf");
+}
+
+@font-face {
+    font-family: "New";
+    src: url("./fonts/font5.otf");
+}
+
+.user-form {
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    padding: 35px;
+}
+
+.text-label {
+    font-family: 'Label';
+    margin: 25px 0;
+}
+
+.submit-button {
+    font-family: 'Label';
+    font-size: 25px !important;
+    background: #5b64f7 !important;
+    color: white !important;
+    margin: 20px
+}
+
+.submit-button:hover {
+    cursor: pointer;
+}
+
+.wisher-name {
+    top: 55%;
+    position: absolute;
+    color: white;
+    display: block;
+    width: 100%;
+    font-size: 90px;
+    font-family: 'Beyond';
+    text-align: center;
+}
+
+.quote {
+    text-align: center;
+    font-size: 30px;
+    position: absolute;
+    color: white;
+    top: 24%;
+    font-family: 'New';
+    padding: 0px 9px;
+    width: 0px;
+    -webkit-transition: width 2s;
+    /* For Safari 3.1 to 6.0 */
+    transition: width 2s;
+}
+
+.quote-animate {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    position: absolute;
+    color: white;
+    top: 24%;
+    font-family: 'New';
+    padding: 0px 9px;
+    -webkit-transition: width 2s;
+    /* For Safari 3.1 to 6.0 */
+    transition: width 2s;
+    -webkit-transition: width 2s;
+    /* For Safari 3.1 to 6.0 */
+    transition: width 2s;
+}
+
+.from {
+    text-align: center;
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    display: block;
+    width: 100%;
+    top: 50%;
+}
